@@ -7,8 +7,8 @@ body {
   line-height: 18px;
   font-style: normal;
   font-weight: normal;
-  color: var(--black);
-  background-color: var(--white);
+  color: $black;
+  background-color: $white;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -52,15 +52,19 @@ h1, h2, h3 {
 .button {
   font-size: 14px;
   line-height: 18px;
-  color: var(--white);
-  background-color: var(--basic-red);
+  color: $white;
+  background-color: $basic-red;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  outline-color: var(--black);
+  outline-color: $black;
   padding-top: 2px;
   box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
 }
 

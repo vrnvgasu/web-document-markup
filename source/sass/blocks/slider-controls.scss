@@ -1,0 +1,39 @@
+.slider-controls {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 220px;
+  flex-wrap: wrap;
+
+  &__input:focus + label {
+    box-shadow: 0 0 1px 2px $basic-grey-darkest;
+  }
+
+  &__button {
+    width: 10px;
+    height: 10px;
+    border: none;
+    background-color: $white;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+input:checked + .slider-controls__button::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  background-color: $basic-red;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}

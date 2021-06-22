@@ -1,0 +1,103 @@
+.promo {
+  color: $white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+
+  &__block-list {
+    padding: 0;
+    margin: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__block-item {
+    width: 300px;
+    height: 123px;
+    display: grid;
+    grid-template-rows: 64px 1fr;
+    position: relative;
+
+    &--materials {
+      background-color: $special-yellow;
+      background-image: url("../img/promo-icon-1.svg");
+      background-repeat: no-repeat;
+      background-position: 213px 31px;
+    }
+
+    &--tools {
+      background-color: $special-blue;
+      background-image: url("../img/promo-icon-2.svg");
+      background-repeat: no-repeat;
+      background-position: 194px 34px;
+    }
+
+    &--technics {
+      background-color: $special-lilac;
+      background-image: url("../img/promo-icon-3.svg");
+      background-repeat: no-repeat;
+      background-position: 191px 31px;
+    }
+
+    &--sales {
+      background-color: $special-grenlight;
+      grid-column: -1 / -2;
+      grid-row: 2 / 3;
+      background-image: url("../img/promo-icon-4.svg");
+      background-repeat: no-repeat;
+      background-position: 196px 26px;
+    }
+
+    &--delivery {
+      background-color: $promo-yellow;
+      grid-column: -1 / -2;
+      grid-row: -1 / -2;
+      background-image: url("../img/promo-icon-5.svg");
+      background-repeat: no-repeat;
+      background-position: 191px 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      padding-top: 7px;
+      justify-content: flex-start;
+      padding-left: 23px;
+    }
+
+    svg {
+      grid-column: -1 / -2;
+      grid-row: 1 / -1;
+      margin-top: 34px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__button {
+    background-color: $promo-button-background;
+    width: 135px;
+    height: 38px;
+    display: flex;
+    text-align: center;
+    margin-left: 23px;
+    box-sizing: border-box;
+    padding-top: 0;
+
+    &:hover {
+      background-color: $promo-button-background-hover;
+    }
+
+    &:active {
+      background-color: $promo-button-background-active;
+    }
+  }
+}

@@ -77,79 +77,79 @@
     <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
     <section class="promo container">
       <h2 class="visually-hidden">Промо-блок</h2>
-      <ul class="promo-block-list">
-        <li class="promo-block-item promo-materials">
-          <div class="flag-wrapper">
-            <div class="flag"><span>new</span></div>
+      <ul class="promo__block-list">
+        <li class="promo__block-item promo__block-item--materials">
+          <div class="flag">
+            <div class="flag__item"><span>new</span></div>
           </div>
           <h3>Материалы</h3>
-          <a href="" class="button promo-button" aria-label="Материалы на любой вкус">на любой вкус</a>
+          <a href="" class="button promo__button" aria-label="Материалы на любой вкус">на любой вкус</a>
         </li>
-        <li class="promo-block-item promo-tools">
-          <div class="flag-wrapper hidden">
-            <div class="flag"><span>new</span></div>
+        <li class="promo__block-item promo__block-item--tools">
+          <div class="flag hidden">
+            <div class="flag__item"><span>new</span></div>
           </div>
           <h3>Инструмент</h3>
-          <a href="" class="button promo-button" aria-label="Инструмент на все случаи">на все случаи</a>
+          <a href="" class="button promo__button" aria-label="Инструмент на все случаи">на все случаи</a>
         </li>
-        <li class="promo-block-item promo-technics">
-          <div class="flag-wrapper hidden">
-            <div class="flag"><span>new</span></div>
+        <li class="promo__block-item promo__block-item--technics">
+          <div class="flag hidden">
+            <div class="flag__item"><span>new</span></div>
           </div>
           <h3>Техника</h3>
-          <a href="" class="button promo-button" aria-label="Техника для стройки">для стройки</a>
+          <a href="" class="button promo__button" aria-label="Техника для стройки">для стройки</a>
         </li>
-        <li class="promo-block-item promo-block-sales">
-          <div class="flag-wrapper hidden">
-            <div class="flag"><span>new</span></div>
+        <li class="promo__block-item promo__block-item--sales">
+          <div class="flag hidden">
+            <div class="flag__item"><span>new</span></div>
           </div>
           <h3>Скидки 50%</h3>
-          <a href="" class="button promo-button" aria-label="Скидки 50% на 350 товаров">на 350 товаров</a>
+          <a href="" class="button promo__button" aria-label="Скидки 50% на 350 товаров">на 350 товаров</a>
         </li>
-        <li class="promo-block-item promo-delivery">
-          <div class="flag-wrapper hidden">
+        <li class="promo__block-item promo__block-item--delivery">
+          <div class="flag hidden">
             <div class="flag "><span>new</span></div>
           </div>
           <h3>Доставка</h3>
-          <a href="" class="button promo-button" aria-label="Доставка бесплатно">бесплатно</a>
+          <a href="" class="button promo__button" aria-label="Доставка бесплатно">бесплатно</a>
         </li>
       </ul>
       <div class="promo-slider">
-        <ul class="promo-slider-list">
-          <li class="promo-slider-item" data-slide="slider-controls-slide-1">
-            <div class="slider-content">
+        <ul class="promo-slider__list">
+          <li class="promo-slider__item" data-slide="slider-controls-slide-1">
+            <div class="promo-slider__content">
               <h3>Перфораторы</h3>
               <span>Настоящие мужские игрушки</span>
             </div>
-            <figure class="slider-image">
+            <figure class="promo-slider__image">
               <img src="img/slider-1.jpg" width="620" height="266" alt="Каталог перфораторов">
             </figure>
-            <a href="catalog.html" class="button slider-button">ОТКРЫТЬ КАТАЛОГ</a>
+            <a href="catalog.html" class="button promo-slider__button">ОТКРЫТЬ КАТАЛОГ</a>
           </li>
-          <li class="promo-slider-item hidden" data-slide="slider-controls-slide-2">
-            <div class="slider-content">
+          <li class="promo-slider__item promo-slider__item--hidden" data-slide="slider-controls-slide-2">
+            <div class="promo-slider__content">
               <h3>Дрели</h3>
               <span>Соседям на радость!</span>
             </div>
-            <figure class="slider-image">
+            <figure class="promo-slider__image">
               <img src="img/slider-2.jpg" width="620" height="266" alt="Каталог дрелей">
             </figure>
-            <a href="catalog.html" class="button slider-button">ОТКРЫТЬ КАТАЛОГ</a>
+            <a href="catalog.html" class="button promo-slider__button">ОТКРЫТЬ КАТАЛОГ</a>
           </li>
         </ul>
         <form class="slider-controls">
-          <input type="radio" class="visually-hidden slider-controls-input" name="slider" value="slide-1" id="slider-controls-slide-1" aria-label="Слайд перфораторов" checked>
-          <label for="slider-controls-slide-1" class="slider-controls-button">
+          <input type="radio" class="visually-hidden slider-controls__input" name="slider" value="slide-1" id="slider-controls-slide-1" aria-label="Слайд перфораторов" checked>
+          <label for="slider-controls-slide-1" class="slider-controls__button">
             <span class="visually-hidden">Слайд перфораторов</span>
           </label>
-          <input type="radio" class="visually-hidden slider-controls-input" name="slider" value="slide-2"  id="slider-controls-slide-2" aria-label="Слайд дрелей">
-          <label for="slider-controls-slide-2" class="slider-controls-button">
+          <input type="radio" class="visually-hidden slider-controls__input" name="slider" value="slide-2"  id="slider-controls-slide-2" aria-label="Слайд дрелей">
+          <label for="slider-controls-slide-2" class="slider-controls__button">
             <span class="visually-hidden">Слайд дрелей</span>
           </label>
         </form>
-        <div class="slider-navigation">
-          <button type="button" class="button slider-button-back" aria-label="Переключить слайд назад"></button>
-          <button type="button" class="button slider-button-next" aria-label="Переключить слайд вперед"></button>
+        <div class="promo-slider__navigation">
+          <button type="button" class="button promo-slider__button--back" aria-label="Переключить слайд назад"></button>
+          <button type="button" class="button promo-slider__button--next" aria-label="Переключить слайд вперед"></button>
         </div>
       </div>
     </section>
@@ -160,8 +160,8 @@
       </div>
       <ul class="good-list">
         <li class="good-item">
-          <div class="flag-wrapper hidden">
-            <div class="flag"><span>NEW</span></div>
+          <div class="flag hidden">
+            <div class="flag__item"><span>NEW</span></div>
           </div>
           <div class="good-img">
             <img class="bosch-9000" src="img/bosch-bfg-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
@@ -178,8 +178,8 @@
           <a href="" class="button good-view" aria-label="Заказать товар">25500 Р.</a>
         </li>
         <li class="good-item">
-          <div class="flag-wrapper">
-            <div class="flag"><span>NEW</span></div>
+          <div class="flag">
+            <div class="flag__item"><span>NEW</span></div>
           </div>
           <div class="good-img">
             <img class="bosch-3000" src="img/bosch-bfg-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -196,8 +196,8 @@
           <a href="" class="button good-view" aria-label="Заказать товар">15500 Р.</a>
         </li>
         <li class="good-item">
-          <div class="flag-wrapper hidden">
-            <div class="flag"><span>NEW</span></div>
+          <div class="flag hidden">
+            <div class="flag__item"><span>NEW</span></div>
           </div>
           <div class="good-img">
             <img class="bosch-6000" src="img/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -214,8 +214,8 @@
           <a href="" class="button good-view" aria-label="Заказать товар">25500 Р.</a>
         </li>
         <li class="good-item">
-          <div class="flag-wrapper">
-            <div class="flag"><span>NEW</span></div>
+          <div class="flag">
+            <div class="flag__item"><span>NEW</span></div>
           </div>
           <div class="good-img">
             <img class="bosch-3000" src="img/bosch-bfg-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">

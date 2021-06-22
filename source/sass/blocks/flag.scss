@@ -1,0 +1,32 @@
+.flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+
+  &__item {
+    transform: rotate(45deg);
+    background-color: $basic-red;
+    position: absolute;
+    color: $white;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-weight: normal;
+    right: -25px;
+    bottom: 35px;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    text-transform: uppercase;
+
+    span {
+      margin-left: 40px;
+      margin-top: 8px;
+    }
+  }
+}
+
+
