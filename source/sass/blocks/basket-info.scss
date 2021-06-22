@@ -1,0 +1,65 @@
+.basket-info {
+  width: 620px;
+  height: 282px;
+  background-color: $white;
+  top: 50%;
+  left: 50%;
+  margin-top: -141px;
+  margin-left: -293px;
+
+  p {
+    margin: 67px 0 0 0;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    font-family: "Cuprum", Arial, sans-serif;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../img/icon-mark.svg") no-repeat 0 0;
+      width: 66px;
+      height: 66px;
+      top: -19px;
+      left: -95px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__actions {
+    height: 112px;
+    width: 100%;
+    background-color: $popap-basket;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 67px;
+
+    .button {
+      width: 192px;
+      height: 38px;
+      padding-right: 2px;
+      cursor: pointer;
+    }
+  }
+
+  &__make-order {
+    margin-right: 10px;
+  }
+
+  &__proceed {
+    background-color: $white;
+    color: $black;
+  }
+
+  &__close {
+    top: 12px;
+  }
+}

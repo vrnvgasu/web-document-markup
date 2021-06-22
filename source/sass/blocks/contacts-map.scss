@@ -1,0 +1,12 @@
+.contacts-map {
+  width: 943px;
+  height: 449px;
+  margin-left: calc(-943px/2);
+  margin-top: calc(-449px/2);
+
+  iframe {
+    border: none;
+    width: 943px;
+    height: 444px;
+  }
+}
