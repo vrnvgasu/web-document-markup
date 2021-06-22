@@ -34,6 +34,25 @@
     grid-template-rows: 178px min-content 1fr 58px;
     position: relative;
 
+    h3 {
+      font-size: 18px;
+      line-height: 20px;
+      justify-self: center;
+      max-width: 185px;
+      text-align: center;
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+    }
+
+    del {
+      font-size: 17px;
+      line-height: 18px;
+      color: var(--color-old-price);
+      justify-self: center;
+      padding-top: 8px;
+      grid-row: -2 / -3;
+    }
+
     &-buttons {
       display: none;
       flex-direction: column;
