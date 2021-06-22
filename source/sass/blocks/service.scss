@@ -1,0 +1,150 @@
+.service {
+  background-color: $basic-background;
+  margin-top: 70px;
+  width: 100%;
+
+  h2 {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-top: 64px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: min-content min-content;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    align-items: flex-start;
+    min-height: 238px;
+  }
+
+  &__header-description {
+    margin-bottom: auto;
+  }
+
+  &__list-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    min-height: 186px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 279px;
+      width: 10px;
+      background: url("../img/service-shadow.svg");
+      z-index: 1;
+      position: absolute;
+      top: -50px;
+      right: 0;
+    }
+  }
+
+  &__item {
+    padding: 0;
+    height: 62px;
+
+    &--active .service__item-button {
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 30px;
+      background-color: $white;
+      color: $basic-grey-dark;
+      box-shadow:
+        0 1px 0 $white,
+        inset 0 1px 0 $white;
+    }
+  }
+
+  &__item-button {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    background-color: $basic-grey-dark;
+    color: $white;
+    height: 61px;
+    width: 240px;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    padding-left: 22px;
+    text-transform: capitalize;
+    box-shadow:
+      0 1px 0 $header-panel,
+      inset 0 1px 0 $border-grey-dart;
+
+    &:hover {
+      background-color: $header-panel;
+    }
+  }
+
+  &__slider-list {
+    margin: 0;
+    padding: 0;
+    min-height: 284px;
+  }
+
+  &__slider-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 7px;
+    min-height: 284px;
+
+    &--hidden {
+      display: none;
+    }
+
+    &--delivery {
+      background: url("../img/service-delivery.png") no-repeat 159px 19px;
+    }
+
+    &--guarantee {
+      background: url("../img/service-guarantee.png") no-repeat right bottom;
+    }
+
+    &--credit {
+      background: url("../img/service-credit.png") no-repeat right bottom;
+
+      .service__slider-button {
+        width: 195px;
+        height: 38px;
+        margin-top: 30px;
+      }
+    }
+
+    h3 {
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 30px;
+      color: $basic-grey-dark;
+      text-transform: uppercase;
+      margin-top: -1px;
+    }
+
+    p {
+      margin-top: 30px;
+    }
+  }
+}
