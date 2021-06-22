@@ -7,78 +7,72 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body class="page-body">
+  <body class="page__body">
   <header class="main-header">
-    <nav class="main-navigation">
-      <div class="main-header-panel">
-        <div class="main-header-panel-wrapper container">
-          <a href="index.html" class="main-header-logo"><img src="img/logo-technomart.svg" width="107" height="17" alt="Логотип ТЕХНОМАРТ"></a>
+    <nav class="navigation">
+      <div class="navigation-panel">
+        <div class="navigation-panel__wrapper container">
+          <a href="index.html" class="navigation-panel__logo">
+            <img src="img/logo-technomart.svg" width="107" height="17" alt="Логотип ТЕХНОМАРТ">
+          </a>
           <form>
-            <label class="main-header-search">
+            <label class="navigation-panel__search">
               <span class="visually-hidden">Поиск</span>
-              <input type="search" class="search" placeholder="Поиск:">
+              <input class="navigation-panel__search-input" type="search" placeholder="Поиск:">
               <svg aria-hidden="true" focusable="false" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z" fill="#fff" opacity=".3"/></svg>
             </label>
           </form>
-          <div class="utility-panel">
-            <a href="" class="bookmark utility-panel-button">
+          <div class="navigation-panel__utility utility-panel">
+            <a href="" class="utility-panel__item utility-panel__item--bookmark">
               <svg aria-hidden="true" focusable="false" width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 15c0 .55-.37.74-.82.43l-5.36-3.77a1.54 1.54 0 00-1.64 0L.82 15.43c-.45.31-.82.12-.82-.43V1a1 1 0 011-1h12a1 1 0 011 1v14z" fill="#fff"  opacity=".3"/></svg>
               Закладки: <output>0</output>
             </a>
-            <a href="" class="basket utility-panel-button basket-active">
+            <a href="" class="utility-panel__item utility-panel__item--basket">
               <svg aria-hidden="true" focusable="false" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#fff"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></g></svg>
-              Корзина: <output>10</output>
+              Корзина: <output>0</output>
             </a>
-            <a href="" class="button make-order">Оформить заказ</a>
+            <a href="" class="button utility-panel__button">Оформить заказ</a>
           </div>
         </div>
       </div>
-      <div class="info-panel container">
-        <section class="main-header-contacts">
+      <div class="navigation-info container">
+        <section class="navigation-info__contacts main-contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <p>
-            <i class="main-header-about">Интернет-магазин<br>
+            <i class="main-contacts__about">Интернет-магазин<br>
               строительных материалов<br>
               и инструментов для ремонта</i>
           </p>
-          <div class="header-contacts">
-            <a href="tel:+78125550555" class="header-phone" aria-label="Телефон для связи">
+          <div class="main-contacts__info">
+            <a href="tel:+78125550555" class="main-contacts__phone" aria-label="Телефон для связи">
               <svg aria-hidden="true" focusable="false" width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.57 18.98h-.94a14.53 14.53 0 01-9.36-4.86 16.33 16.33 0 01-4.3-9.9V3.09c.09-.77.47-1.3.9-1.75C2.43.77 3.26.04 4 .02 4.56 0 5.5.4 5.88.92c.33.44.5 1.34.66 2 .15.67.5 1.64.4 2.29-.14 1-1.48 1.43-1.87 2.17a14.03 14.03 0 006.29 7.03c.71-.4 1.35-1.57 2.33-1.6.36 0 .82.18 1.19.29.4.12.74.27 1.1.4.6.23 1.65.53 2 1.03.37.51.57 1.35.5 1.88-.17 1.04-1.89 2.2-2.9 2.57z" fill="#B7BFC8"/></svg>
               +7 (812) 555-05-55
             </a>
-            <address class="header-address">
+            <address class="main-contacts__address">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             </address>
           </div>
         </section>
-        <section class="header-account">
-          <h2 class="visually-hidden">Профиль</h2>
-          <div class="header-profile">
-            <a href="" class="profile" aria-label="Вход в профиль">
-              <svg aria-hidden="true" focusable="false" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z" fill="#C5C5C5"/></svg>
-              <span>Равшан Джамшутович</span>
-            </a>
-            <a href="" class="logout" aria-label="Выход">
-              <svg aria-hidden="true" focusable="false"  width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" fill="#C5C5C5"/><path d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0 .12 1.81.09 3.03v10.94C.1 15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" fill="#C5C5C5"/></svg>
-            </a>
-          </div>
-          <div class="account-panel">
-            <a href="">Мои заказы</a>
-            <a href="">Личный кабинет</a>
-          </div>
-        </section>
+        <div class="authorization">
+          <a href="" class="button authorization__button authorization__button--login">
+            <svg aria-hidden="true" focusable="false" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.17 8.5L5.7 0v6H0v5h5.71v6l8.46-8.5z" fill="#C5C5C5"/><path d="M16.18 15.01h-4.79V17h4.79c2.07 0 2.86-1.81 2.88-3.03V3.03C19.04 1.8 18.26 0 16.18 0h-4.79v1.99h4.79c.8 0 .94.68.96 1.06v10.9c-.02.38-.16 1.06-.96 1.06z" fill="#C5C5C5"/></svg>
+            Войти
+          </a>
+          <a href="" class="button authorization__button authorization__button--registration">Регистрация</a>
+        </div>
       </div>
-      <ul class="site-navigation-list container">
-        <li class="site-navigation-item"><a href="index.html">Главная</a></li>
-        <li class="site-navigation-item"><a href="">Компания</a></li>
-        <li class="site-navigation-item"><a href="">Каталог</a></li>
-        <li class="site-navigation-item"><a href="">Новости</a></li>
-        <li class="site-navigation-item"><a href="">Спецпредложения</a></li>
-        <li class="site-navigation-item"><a href="">Доставка</a></li>
-        <li class="site-navigation-item"><a href="">Контакты</a></li>
+      <ul class="navigation__list container">
+        <li class="navigation__item"><a href="index.html">Главная</a></li>
+        <li class="navigation__item"><a href="">Компания</a></li>
+        <li class="navigation__item"><a href="">Каталог</a></li>
+        <li class="navigation__item"><a href="">Новости</a></li>
+        <li class="navigation__item"><a href="">Спецпредложения</a></li>
+        <li class="navigation__item"><a href="">Доставка</a></li>
+        <li class="navigation__item"><a href="">Контакты</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section class="breadcrumbs container">
       <h2 class="visually-hidden">breadcrumbs</h2>
