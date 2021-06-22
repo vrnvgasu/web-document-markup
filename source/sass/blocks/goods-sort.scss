@@ -1,0 +1,65 @@
+.goods-sort {
+  grid-column: -2 / -1;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 3fr 5fr 1fr;
+  gap: 20px;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  background-color: $catalog-filters-background;
+
+  h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    padding-left: 20px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0 0 0 1px;
+    width: 355px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    padding-top: 1px;
+
+    &:nth-child(2) {
+      margin-left: 71px;
+      margin-right: auto;
+    }
+  }
+
+  &__change {
+    display: flex;
+    width: 55px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 9px;
+  }
+
+  &__button {
+    background-color: transparent;
+    outline: none;
+
+    &:hover path,
+    &:focus path{
+      fill: $black;
+    }
+
+    &--ascending {
+      transform: rotate(180deg);
+    }
+  }
+
+  .sort-active path {
+    fill: $basic-red;
+  }
+}

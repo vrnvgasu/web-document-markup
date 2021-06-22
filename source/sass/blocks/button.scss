@@ -1,0 +1,44 @@
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
+  background-color: $basic-red;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline-color: $black;
+  padding-top: 2px;
+  box-sizing: border-box;
+}
+
+.button-sort {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: $catalog-filters-background;
+  color: $color-black-light;
+  border: none;
+  border-bottom: 1px dotted $basic-red;
+  padding: 0;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $black;
+    border-bottom: 1px solid $basic-red;
+    padding-bottom: 1px;
+  }
+
+  &:active {
+    color: $basic-red;
+    border-bottom: none;
+    padding-bottom: 1px;
+  }
+}
+
+.button-sort-active {
+  color: $basic-red;
+  border-bottom: none;
+  padding-bottom: 1px;
+}

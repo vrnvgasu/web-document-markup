@@ -52,13 +52,22 @@
             </address>
           </div>
         </section>
-        <div class="authorization">
-          <a href="" class="button authorization__button authorization__button--login">
-            <svg aria-hidden="true" focusable="false" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.17 8.5L5.7 0v6H0v5h5.71v6l8.46-8.5z" fill="#C5C5C5"/><path d="M16.18 15.01h-4.79V17h4.79c2.07 0 2.86-1.81 2.88-3.03V3.03C19.04 1.8 18.26 0 16.18 0h-4.79v1.99h4.79c.8 0 .94.68.96 1.06v10.9c-.02.38-.16 1.06-.96 1.06z" fill="#C5C5C5"/></svg>
-            Войти
-          </a>
-          <a href="" class="button authorization__button authorization__button--registration">Регистрация</a>
-        </div>
+        <section class="header-account">
+          <h2 class="visually-hidden">Профиль</h2>
+          <div class="header-account__profile">
+            <a href="" class="profile" aria-label="Вход в профиль">
+              <svg aria-hidden="true" focusable="false" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z" fill="#C5C5C5"/></svg>
+              <span>Равшан Джамшутович</span>
+            </a>
+            <a href="" class="logout" aria-label="Выход">
+              <svg aria-hidden="true" focusable="false"  width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8.5L11.12 0v6h-6v5h6v6L20 8.5z" fill="#C5C5C5"/><path d="M2.1 13.95V3.05c.02-.38.18-1.06 1.02-1.06h5.02V0H3.12C.94 0 .12 1.81.09 3.03v10.94C.1 15.2.94 17 3.12 17h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" fill="#C5C5C5"/></svg>
+            </a>
+          </div>
+          <div class="header-account__panel">
+            <a href="">Мои заказы</a>
+            <a href="">Личный кабинет</a>
+          </div>
+        </section>
       </div>
       <ul class="navigation__list container">
         <li class="navigation__item"><a href="index.html">Главная</a></li>
@@ -182,23 +191,23 @@
       </section>
       <section class="goods-sort">
         <h2>СОРТИРОВКА:</h2>
-        <ul class="goods-sort-list">
-          <li class="goods-sort-item">
+        <ul class="goods-sort__list">
+          <li class="goods-sort__item">
             <button type="button" class="button button-sort button-sort-active">ПО ЦЕНЕ</button>
           </li>
-          <li class="goods-sort-item">
+          <li class="goods-sort__item">
             <button type="button" class="button button-sort">ПО ТИПУ</button>
           </li>
-          <li class="goods-sort-item">
+          <li class="goods-sort__item">
             <button type="button" class="button button-sort">ПО ФУНКЦИОНАЛУ</button>
           </li>
         </ul>
-        <div class="goods-sort-change">
-          <button type="button" class="button goods-sort-button button-sort-ascending sort-active">
+        <div class="goods-sort__change">
+          <button type="button" class="button goods-sort__button goods-sort__button--ascending sort-active">
             <span class="visually-hidden">Сортировать в порядке уменьшения</span>
             <svg aria-hidden="true" focusable="false" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L0 0h11" fill="#C5C5C5"/></svg>
           </button>
-          <button type="button" class="button goods-sort-button">
+          <button type="button" class="button goods-sort__button">
             <span class="visually-hidden">Сортировать в порядке увеличения</span>
             <svg aria-hidden="true" focusable="false" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L0 0h11" fill="#C5C5C5"/></svg>
           </button>

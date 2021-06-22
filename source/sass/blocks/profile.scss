@@ -1,0 +1,19 @@
+.profile {
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    margin-right: 22px;
+    margin-top: -1px;
+  }
+
+  &:hover path {
+    fill: $basic-grey;
+  }
+
+  &:active path {
+    fill: $basic-greylight;
+  }
+}

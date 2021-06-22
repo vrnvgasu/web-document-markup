@@ -49,21 +49,6 @@ h1, h2, h3 {
   padding: 0;
 }
 
-.button {
-  font-size: 14px;
-  line-height: 18px;
-  color: $white;
-  background-color: $basic-red;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  outline-color: $black;
-  padding-top: 2px;
-  box-sizing: border-box;
-}
-
 .hidden {
   display: none;
 }
@@ -98,4 +83,22 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   padding-left: 29px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

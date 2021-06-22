@@ -1,0 +1,12 @@
+.logout {
+  margin-right: 17px;
+  margin-top: 3px;
+
+  &:hover path {
+    fill: $basic-grey;
+  }
+
+  &:active path {
+    fill: $basic-greylight;
+  }
+}

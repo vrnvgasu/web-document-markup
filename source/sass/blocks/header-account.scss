@@ -1,0 +1,63 @@
+.header-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1px;
+
+  &__profile {
+    background-color: $white;
+    width: 299px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 46px;
+
+    a {
+      font-size: 21px;
+      line-height: 21px;
+      color: $black;
+
+      &:active {
+        color: $basic-greylight;
+      }
+    }
+  }
+
+  &__panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 210px;
+    margin-top: 7px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $basic-grey-dark;
+      order: 2;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 18px;
+      color: $basic-grey-dark;
+
+      &:last-child {
+        order: 3;
+      }
+
+      &:hover {
+        color: $basic-red;
+      }
+
+      &:active {
+        color: $basic-greylight;
+      }
+    }
+  }
+}
