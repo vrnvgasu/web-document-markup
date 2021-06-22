@@ -1,0 +1,36 @@
+.main-footer {
+  margin-top: 70px;
+  background-color: $basic-grey-dark;
+  color: $basic-background;
+
+  a {
+    color: $basic-background;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 380px 560px;
+    min-height: 193px;
+  }
+
+  &__contacts {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: $basic-grey-dark;
+    display: flex;
+    flex-direction: column;
+
+    address {
+      font-style: normal;
+      margin-top: 16px;
+      margin-left: 3px;
+    }
+  }
+
+  &__logo img {
+    background-color: $basic-red;
+    padding: 20px 42px 25px 41px;
+    box-shadow: inset 0px -5px 0px $black-light;
+  }
+}

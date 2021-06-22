@@ -1,0 +1,40 @@
+.footer-site-map {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: $basic-grey-dark;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.5;
+      text-decoration: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 3px;
+    margin-left: 10px;
+    margin-top: 37px;
+
+    &--promo {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-left: 35px;
+      margin-top: 34px;
+
+      a {
+        color: $special-yellowlight;
+      }
+    }
+  }
+}

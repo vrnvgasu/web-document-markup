@@ -1,0 +1,22 @@
+.footer-bottom {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: $header-panel;
+  color: $white;
+
+  &__wrapper {
+    display: flex;
+    min-height: 107px;
+    background-color: $header-panel;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright {
+    width: 380px;
+    margin: 0;
+    padding: 0;
+    background-color: $header-panel;
+  }
+}

@@ -1,0 +1,21 @@
+.designed {
+  margin: 0;
+  padding: 0;
+  background-color: $header-panel;
+  width: 98px;
+  margin-left: auto;
+  margin-right: 13px;
+
+  a {
+    color: $special-yellowlight;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $basic-red;
+      text-decoration: none;
+    }
+  }
+}

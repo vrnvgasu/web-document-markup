@@ -1,0 +1,36 @@
+.footer-social {
+  width: 260px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    background-color: $header-panel;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 3px;
+    }
+
+    a {
+      color: $white;
+      background-color: $basic-grey-darkest;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+    }
+
+    &:hover a {
+      background-color: $basic-red;
+    }
+  }
+}
