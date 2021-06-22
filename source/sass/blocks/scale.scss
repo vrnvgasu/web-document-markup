@@ -1,0 +1,38 @@
+.scale {
+  height: 2px;
+  background: $range-scale;
+  position: relative;
+
+  .bar {
+    width: 83%;
+    height: 2px;
+    background: $range-bar;
+  }
+
+  .toggle {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid $white;
+    background-color: $range-toggle;
+    border-radius: 50%;
+    box-shadow: 0 2px $range-toggle-light;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 1px $basic-grey-darkest;
+    }
+  }
+
+  .toggle-min {
+    left: 0;
+  }
+
+  .toggle-max {
+    left: 78%;
+  }
+}

@@ -1,0 +1,28 @@
+.filter-option {
+  margin-bottom: 20px;
+  padding-left: 36px;
+  font-size: 15px;
+  line-height: 19px;
+  position: relative;
+
+  label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+}
+
+li.filter-option:hover path {
+  fill: var(--checked);
+}
+
+li.filter-option:hover label::before {
+  border-color: var(--checked);
+}
+
+li.filter-option:hover label::after {
+  background-color: var(--checked);
+}

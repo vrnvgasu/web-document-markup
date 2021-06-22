@@ -1,0 +1,13 @@
+.form-supply {
+  margin-top: 2px;
+  border-bottom: none;
+  padding-bottom: 1px;
+
+  ul {
+    margin-top: 6px;
+  }
+
+  .filter-option:not(:first-child) {
+    margin-top: 22px;
+  }
+}

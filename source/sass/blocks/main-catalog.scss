@@ -1,0 +1,6 @@
+.main-catalog {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-template-rows: repeat(2, min-content) 1fr;
+  gap: 20px;
+}

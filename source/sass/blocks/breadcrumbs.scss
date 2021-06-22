@@ -1,0 +1,43 @@
+.breadcrumbs {
+  height: 59px;
+  display: flex;
+  align-items: center;
+
+  &__list {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: -1px 0 0 -1px;
+  }
+
+  &__item {
+    position: relative;
+
+    svg {
+      margin-top: 6px;
+    }
+
+    &:not(:first-child) {
+      margin-left: 42px;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      width: 7px;
+      height: 13px;
+      background: url("../img/icon-breadcrumbs.svg") no-repeat 0 0;
+      right: -23px;
+      top: 4px;
+      position: absolute;
+    }
+
+    a {
+      font-family: "PT Sans", Arial, sans-serif;
+      font-size: 13px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+}

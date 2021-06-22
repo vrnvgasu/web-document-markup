@@ -22,7 +22,7 @@
   &__item {
     width: 218px;
     height: 143px;
-    border: 1px solid var(--basic-greylighter);
+    border: 1px solid $basic-greylighter;
     box-sizing: content-box;
 
     a {
@@ -33,11 +33,11 @@
       align-items: center;
 
       &:hover {
-        box-shadow: 0 0 15px 2px var(--basic-greylighter);
+        box-shadow: 0 0 15px 2px $basic-greylighter;
       }
 
       &:active {
-        box-shadow: 0 0 15px 5px var(--basic-greylighter);
+        box-shadow: 0 0 15px 5px $basic-greylighter;
         opacity: 0.5;
       }
     }

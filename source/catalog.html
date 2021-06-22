@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Каталог: Техномарт</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -76,20 +75,20 @@
   <main>
     <section class="breadcrumbs container">
       <h2 class="visually-hidden">breadcrumbs</h2>
-      <ul class="breadcrumbs-list">
-        <li class="breadcrumbs-item">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
           <a href="index.html">
             <span class="visually-hidden">Главная страница</span>
             <svg aria-hidden="true" focusable="false" width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z" fill="#C1C6CE"/><path d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z" fill="#C1C6CE"/></svg>
           </a>
         </li>
-        <li class="breadcrumbs-item">
+        <li class="breadcrumbs__item">
           <a href="">КАТАЛОГ</a>
         </li>
-        <li class="breadcrumbs-item">
+        <li class="breadcrumbs__item">
           <a href="">ИНСТРУМЕНТ</a>
         </li>
-        <li class="breadcrumbs-item">
+        <li class="breadcrumbs__item">
           <a>ПЕРФОРАТОРЫ</a>
         </li>
       </ul>
@@ -98,11 +97,11 @@
       <h1 class="page-title">ПЕРФОРАТОРЫ</h1>
       <section class="goods-filter">
         <h2>ФИЛЬТР:</h2>
-        <form class="catalog-filter" method="get" action="https://echo.htmlacademy.ru">
+        <form class="catalog-filter" method="get" action="/catalog.html">
           <fieldset class="form-price">
             <legend>Цена:</legend>
             <div class="range-filter">
-              <div class="range-controls">
+              <div class="range-filter__controls">
                 <div class="scale">
                   <div class="bar" style="width: 83%;"></div>
                   <div class="toggle toggle-min" tabindex="0" style="left: 0;"></div>
@@ -178,7 +177,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="button goods-filter-button">Показать</button>
+          <button type="submit" class="button goods-filter__button">Показать</button>
         </form>
       </section>
       <section class="goods-sort">
@@ -207,7 +206,7 @@
       </section>
       <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="good__list">
+        <ul class="good__list good__list--catalog">
           <li class="good__item">
             <div class="flag hidden">
               <div class="flag__item"><span>NEW</span></div>
@@ -496,6 +495,6 @@
     </div>
   </div>
 
-  <script src="js/main.min.js"></script>
+  <script src="js/script.min.js"></script>
   </body>
 </html>

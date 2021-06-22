@@ -86,3 +86,16 @@ h1, h2, h3 {
   }
 }
 
+.page-title {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-grey-dark);
+  background-color: var(--background-page-title);
+  grid-column: 1 / -1;
+  height: 89px;
+  display: flex;
+  align-items: center;
+  padding-left: 29px;
+}

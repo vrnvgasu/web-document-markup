@@ -1,0 +1,15 @@
+.range-filter {
+  width: 220px;
+  margin-bottom: 25px;
+
+  &__controls {
+    height: 80px;
+    margin-bottom: 9px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 18px;
+    background-color: $catalog-filters-background;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+}
