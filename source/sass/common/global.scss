@@ -68,3 +68,21 @@ h1, h2, h3 {
   display: none;
 }
 
+.section-header {
+  background-color: var(--section-background);
+  display: flex;
+  align-items: center;
+  width: 940px;
+  height: 89px;
+
+  h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    color: var(--basic-grey-dark);
+    text-transform: uppercase;
+    margin-left: 28px;
+    margin-right: auto;
+  }
+}
+

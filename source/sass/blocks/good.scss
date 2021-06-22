@@ -1,0 +1,178 @@
+.good {
+  display: grid;
+  margin-top: 59px;
+  gap: 20px;
+
+  &__all-button {
+    margin-right: 14px;
+    width: 192px;
+    height: 38px;
+    justify-self: flex-end;
+    margin-left: auto;
+  }
+
+  &__list {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    border: 1px solid $basic-greylighter;
+    box-sizing: content-box;
+    width: 218px;
+    min-height: 316px;
+    display: grid;
+    grid-template-rows: 178px min-content 1fr 58px;
+    position: relative;
+
+    &-buttons {
+      display: none;
+      flex-direction: column;
+      margin: 0 auto;
+      grid-row: 1 / 3;
+      grid-column: 1 / -1;
+      justify-content: flex-start;
+      text-align: center;
+      height: 150px;
+      padding-right: 2px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 15px 2px $basic-greylighter;
+
+      .good__item-buttons {
+        display: flex;
+      }
+
+      .good__img {
+        display: none;
+      }
+
+      h3 {
+        font-size: 18px;
+        line-height: 20px;
+        justify-self: center;
+        max-width: 185px;
+        text-align: center;
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+      }
+
+      del {
+        font-size: 17px;
+        line-height: 18px;
+        color: $color-old-price;
+        justify-self: center;
+        padding-top: 8px;
+        grid-row: -2 / -3;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  &__buy {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+    outline:none;
+    width: 135px;
+    height: 38px;
+    border: none;
+    color: $white;
+    background-color: $basic-green;
+    margin-top: 37px;
+    margin-bottom: 10px;
+    box-shadow: inset 0px -3px 0px $basic-green-darkest;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 0 1px;
+
+    svg {
+      margin-right: 8px;
+      margin-left: 29px;
+      margin-bottom: 4px;
+    }
+
+    &:hover {
+      background-color: $success;
+    }
+
+    &:active, &:focus {
+      background-color: $basic-green-dark;
+    }
+  }
+
+  &__bookmark {
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+    outline:none;
+    width: 135px;
+    height: 38px;
+    color: $basic-grey-dark;
+    background-color: $white;
+    border: 3px solid $basic-green;
+
+    &:hover {
+      border-color: $basic-grey-dark;
+    }
+
+    &:active, &:focus {
+      border-color: $basic-grey-dark-trancend;
+      color: $basic-grey-dark-trancend;
+    }
+  }
+
+  &__view {
+    font-size: 17px;
+    line-height: 18px;
+    width: 141px;
+    height: 38px;
+    margin-left: 44px;
+    grid-row: -1 / -2;
+    border-radius: 2px;
+    position: relative;
+    padding: 0 9px 2px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-top: 10px solid $white;
+      border-right: 10px solid $white;
+      border-left: 10px solid $basic-red;
+      border-bottom: 10px solid $basic-red;
+      right: 0;
+      top: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-top: 10px solid $basic-red;
+      border-right: 10px solid $white;
+      border-left: 10px solid $basic-red;
+      border-bottom: 10px solid $white;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
