@@ -1,0 +1,18 @@
+.popup {
+  //display: none;
+  background-color: $white;
+  z-index: 100;
+  border-top: 7px solid $basic-red;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px $popup-shadow;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  &__close {
+    position: absolute;
+    top: 14px;
+    right: 11px;
+    cursor: pointer;
+  }
+}

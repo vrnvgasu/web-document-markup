@@ -436,33 +436,33 @@
 
   <div class="write-us popup">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="form-main">
-        <div class="write-us-contacts">
-          <p class="write-us-item">
+    <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="write-us__form-main">
+        <div class="write-us__contacts">
+          <p class="write-us__item">
             <label for="name">Ваше имя:</label>
             <input id="name" type="text" name="name" placeholder="Имя Фамилия" required>
           </p>
-          <p class="write-us-item">
+          <p class="write-us__item">
             <label for="email">Ваш e-mail:</label>
             <input id="email" type="email" name="email" placeholder="email@example.com" required>
           </p>
         </div>
-        <p class="write-us-item form-message">
+        <p class="write-us__item write-us__message">
           <label for="message">Текст письма:</label>
           <textarea id="message" name="message" placeholder="В свободной форме" required></textarea>
         </p>
       </div>
-      <div class="form-footer">
-        <button class="button write-us-submit" type="submit">Отправить</button>
+      <div class="write-us__footer">
+        <button class="button write-us__submit" type="submit">Отправить</button>
       </div>
-      <svg aria-label="Закрыть" class="popup-close" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" tabindex="0"><path d="M13.27 10.5l7.43-7.42a1 1 0 000-1.42L19.34.3a1 1 0 00-1.42 0L10.5 7.73 3.08.3a1 1 0 00-1.42 0L.3 1.66a1 1 0 000 1.42l7.43 7.42L.3 17.92a1 1 0 000 1.42l1.35 1.36a1 1 0 001.42 0l7.42-7.43 7.42 7.43a1 1 0 001.42 0l1.36-1.36a1 1 0 000-1.42l-7.43-7.42z" fill="#EE3643"/></svg>
+      <svg aria-label="Закрыть" class="popup__close" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" tabindex="0"><path d="M13.27 10.5l7.43-7.42a1 1 0 000-1.42L19.34.3a1 1 0 00-1.42 0L10.5 7.73 3.08.3a1 1 0 00-1.42 0L.3 1.66a1 1 0 000 1.42l7.43 7.42L.3 17.92a1 1 0 000 1.42l1.35 1.36a1 1 0 001.42 0l7.42-7.43 7.42 7.43a1 1 0 001.42 0l1.36-1.36a1 1 0 000-1.42l-7.43-7.42z" fill="#EE3643"/></svg>
     </form>
   </div>
   <div class="contacts-map popup">
     <h2 class="visually-hidden">Карта проезда</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3756012872338!2d30.321138567348726!3d59.93875333440715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1603178270922!5m2!1sen!2sru" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-    <svg aria-label="Закрыть" class="popup-close" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" tabindex="0"><path d="M13.27 10.5l7.43-7.42a1 1 0 000-1.42L19.34.3a1 1 0 00-1.42 0L10.5 7.73 3.08.3a1 1 0 00-1.42 0L.3 1.66a1 1 0 000 1.42l7.43 7.42L.3 17.92a1 1 0 000 1.42l1.35 1.36a1 1 0 001.42 0l7.42-7.43 7.42 7.43a1 1 0 001.42 0l1.36-1.36a1 1 0 000-1.42l-7.43-7.42z" fill="#EE3643"/></svg>
+    <svg aria-label="Закрыть" class="popup__close" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" tabindex="0"><path d="M13.27 10.5l7.43-7.42a1 1 0 000-1.42L19.34.3a1 1 0 00-1.42 0L10.5 7.73 3.08.3a1 1 0 00-1.42 0L.3 1.66a1 1 0 000 1.42l7.43 7.42L.3 17.92a1 1 0 000 1.42l1.35 1.36a1 1 0 001.42 0l7.42-7.43 7.42 7.43a1 1 0 001.42 0l1.36-1.36a1 1 0 000-1.42l-7.43-7.42z" fill="#EE3643"/></svg>
   </div>
   <div class="basket-info popup">
     <div class="basket-info-wrapper">
@@ -475,7 +475,7 @@
           Продолжить покупки
         </a>
       </div>
-      <svg aria-label="Закрыть" class="popup-close" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" tabindex="0"><path d="M13.27 10.5l7.43-7.42a1 1 0 000-1.42L19.34.3a1 1 0 00-1.42 0L10.5 7.73 3.08.3a1 1 0 00-1.42 0L.3 1.66a1 1 0 000 1.42l7.43 7.42L.3 17.92a1 1 0 000 1.42l1.35 1.36a1 1 0 001.42 0l7.42-7.43 7.42 7.43a1 1 0 001.42 0l1.36-1.36a1 1 0 000-1.42l-7.43-7.42z" fill="#EE3643"/></svg>
+      <svg aria-label="Закрыть" class="popup__close basket-info__close" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" tabindex="0"><path d="M13.27 10.5l7.43-7.42a1 1 0 000-1.42L19.34.3a1 1 0 00-1.42 0L10.5 7.73 3.08.3a1 1 0 00-1.42 0L.3 1.66a1 1 0 000 1.42l7.43 7.42L.3 17.92a1 1 0 000 1.42l1.35 1.36a1 1 0 001.42 0l7.42-7.43 7.42 7.43a1 1 0 001.42 0l1.36-1.36a1 1 0 000-1.42l-7.43-7.42z" fill="#EE3643"/></svg>
     </div>
   </div>
 
