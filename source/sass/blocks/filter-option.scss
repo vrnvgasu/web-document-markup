@@ -16,13 +16,13 @@
 }
 
 li.filter-option:hover path {
-  fill: var(--checked);
+  fill: $checked;
 }
 
 li.filter-option:hover label::before {
-  border-color: var(--checked);
+  border-color: $checked;
 }
 
 li.filter-option:hover label::after {
-  background-color: var(--checked);
+  background-color: $checked;
 }
