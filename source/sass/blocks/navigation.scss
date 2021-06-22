@@ -1,0 +1,55 @@
+.navigation {
+  background-color: $basic-background;
+  padding-bottom: 60px;
+
+  &__list {
+    background-color: $basic-grey-dark;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 5px 0 $header-panel;
+    margin-bottom: 5px;
+
+    a {
+      font-size: 18px;
+      line-height: 24px;
+      color: $white;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1px;
+      padding-left: 28px;
+      padding-right: 28px;
+
+      &:hover {
+        background-color: $header-panel;
+      }
+
+      &:active {
+        background-color: $nav-background-active;
+        color: $color-trancend;
+      }
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+    display: flex;
+    min-height: 55px;
+
+    &:first-child a {
+      padding-left: 53px;
+    }
+
+    &:last-child a {
+      padding-right: 53px;
+    }
+  }
+  //&__panel a, &__panel button, .utility-panel {
+  //  height: 42px;
+  //}
+}

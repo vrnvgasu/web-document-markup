@@ -1,3 +1,10 @@
-@import "common/virables.scss";
-@import "common/normalize.scss";
-@import "common/global.scss";
+@import "common/virables";
+@import "common/normalize";
+@import "common/global";
+@import "blocks/page";
+@import "blocks/navigation";
+@import "blocks/navigation-panel";
+@import "blocks/utility-panel";
+@import "blocks/navigation-info";
+@import "blocks/main-contacts";
+@import "blocks/authorization";

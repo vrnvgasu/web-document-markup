@@ -1,0 +1,56 @@
+.main-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 158px;
+  gap: 20px;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__about {
+    margin-left: 31px;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 23px;
+    color: $basic-red;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__phone {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    color: $basic-red;
+    border: 3px solid $white;
+    box-sizing: border-box;
+    width: 270px;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 46px;
+    padding-bottom: 1px;
+
+    svg {
+      margin-left: 36px;
+      margin-right: 16px;
+    }
+  }
+
+  &__address {
+    font-size: 14px;
+    line-height: 24px;
+    font-style: normal;
+    color: $basic-grey-dark;
+    margin-top: 3px;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,84 @@
+.navigation-panel {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: $header-panel;
+  color: $white;
+
+  a {
+    color: $white;
+    height: 42px;
+  }
+
+  &__wrapper {
+    display: flex;
+    height: 42px;
+    justify-content: space-around;
+  }
+
+  &__logo {
+    img {
+      background-color: $basic-red;
+      padding: 12px 56px 17px 57px;
+      box-shadow: inset 0px -5px 0px $black-light;
+
+      &:active {
+        background-color: $error;
+      }
+    }
+  }
+
+  &__search {
+    background-color: $header-panel;
+    display: grid;
+    grid-template-rows: 1fr;
+
+    &:hover path {
+      fill: $white;
+      opacity: 1;
+    }
+
+    svg {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      order: 1;
+      margin-top: 12px;
+      margin-left: 17px;
+    }
+  }
+
+  &__search-input {
+    color: $white;
+    width: 270px;
+    height: 42px;
+    border: none;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    padding-left: 42px;
+    outline: none;
+    background-color: $header-panel;
+
+    &:focus {
+      color: $black;
+      background-color: $white;
+
+      &::placeholder {
+        color: $black;
+      }
+    }
+
+    &::placeholder {
+      color: $white;
+      opacity: 1;
+    }
+
+    &:focus ~ svg path {
+      fill: $basic-red;
+      opacity: 1;
+    }
+
+    &:active ~ svg path {
+      fill: $basic-red;
+      opacity: 1;
+    }
+  }
+}

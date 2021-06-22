@@ -1,0 +1,74 @@
+.utility-panel {
+  width: 450px;
+  display: flex;
+  justify-content: flex-end;
+  height: 42px;
+
+  &__item {
+    width: 150px;
+    display: flex;
+    align-items: center;
+
+    &:active {
+      background-color: $header-panel-click;
+      color: $color-trancend;
+    }
+
+    output {
+      margin-right: auto;
+      margin-left: 4px;
+    }
+
+    &:hover {
+      path, g {
+        fill: $white;
+        opacity: 1;
+        z-index: 10;
+      }
+    }
+
+    &--bookmark {
+      flex-grow: 1;
+
+      svg {
+        margin-left: 20px;
+        margin-right: 9px;
+      }
+
+      &:active path {
+        opacity: 0.3;
+      }
+    }
+
+    &--basket svg {
+      margin-left: 26px;
+      margin-right: 8px;
+      margin-bottom: 2px;
+
+      &:active g {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__button {
+    line-height: 24px;
+    background-color: $basic-green;
+    color: $white;
+    border: none;
+    padding-bottom: 0;
+    padding-left: 4px;
+    width: 150px;
+    text-transform: none;
+    font-size: 18px;
+
+    &:hover {
+      background-color: $success;
+    }
+
+    &:active {
+      background-color: $basic-green;
+      color: $color-trancend;
+    }
+  }
+}

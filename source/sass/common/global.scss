@@ -38,8 +38,29 @@ h1, h2, h3 {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  //-webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline-color: var(--black);
+  padding-top: 2px;
+  box-sizing: border-box;
+}
+
