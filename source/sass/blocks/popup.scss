@@ -15,4 +15,9 @@
     right: 11px;
     cursor: pointer;
   }
+
+  &--show {
+    display: block;
+    animation: bounce 0.6s;
+  }
 }

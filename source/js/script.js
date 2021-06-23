@@ -1,39 +1,44 @@
-`use strict`;
+'use strict';
 (() => {
-  const aboutContactsButtonElement = document.querySelector(`.about-contacts-button`);
+  const aboutContactsButtonElement = document.querySelector(`.about__contacts-button`);
   const writeUsElement = document.querySelector(`.write-us`);
-  const writeUsForm = document.querySelector(`.write-us-form`);
+  const writeUsForm = document.querySelector(`.write-us__form`);
   const mapPreviewElement = document.querySelector(`.map-preview`);
   const contactsMapElement = document.querySelector(`.contacts-map`);
-  const serviceItemElements = document.querySelectorAll(`.service-item`);
-  const serviceSliderItemElements = document.querySelectorAll(`.service-slider-item`);
-  const promoSliderItemElements = document.querySelectorAll(`.promo-slider-item`);
-  const sliderButtonBackElement = document.querySelector(`.slider-button-back`);
-  const sliderButtonNextElement = document.querySelector(`.slider-button-next`);
+  const serviceItemElements = document.querySelectorAll(`.service__item`);
+  const serviceSliderItemElements = document.querySelectorAll(`.service__slider-item`);
+  const promoSliderItemElements = document.querySelectorAll(`.promo-slider__item`);
+  const sliderButtonBackElement = document.querySelector(`.promo-slider__button--back`);
+  const sliderButtonNextElement = document.querySelector(`.promo-slider__button--next`);
   const sliderControlsForm = document.querySelector(`.slider-controls`);
   const basketInfoElement = document.querySelector(`.basket-info`);
-  const basketInfoProceedElement = document.querySelector(`.basket-info-proceed`);
+  const basketInfoProceedElement = document.querySelector(`.basket-info__proceed`);
 
-  let isStorageSupport = true;
+  const POPUP_SHOW_CLASS = `popup--show`;
+  const SERVICE_ITEM_ACTIVE_CLASS = `service__item--active`;
+  const SERVICE_ITEM_ACTIVE_HIDDEN_CLASS = `service__slider-item--hidden`;
+  const PROMO_SLIDER_ITEM_HIDDEN_CLASS = `promo-slider__item--hidden`;
+
   let storage = {};
 
   try {
     storage.name = localStorage.getItem(`name`);
     storage.email = localStorage.getItem(`email`);
   } catch (err) {
-    isStorageSupport = false;
+    storage.name = null;
+    storage.email = null;
   }
 
   let onPopupCloseClick = (evt) => {
     evt.preventDefault();
     let popup = evt.target.closest(`.popup`);
-    popup.classList.remove(`modal-show`);
+    popup.classList.remove(POPUP_SHOW_CLASS);
 
     evt.target.removeEventListener(`click`, onPopupCloseClick);
   };
 
   let findPopupCloseElement = (popup) => {
-    return popup.querySelector(`.popup-close`);
+    return popup.querySelector(`.popup__close`);
   };
 
   let focusForm = () => {
@@ -58,19 +63,17 @@
 
   let onAboutContactsButtonElementClick = (evt) => {
     evt.preventDefault();
-    writeUsElement.classList.add(`modal-show`);
+    writeUsElement.classList.add(POPUP_SHOW_CLASS);
 
     focusForm();
 
     let popupCloseElement = findPopupCloseElement(writeUsElement);
     popupCloseElement.addEventListener(`click`, onPopupCloseClick);
-
-    popupCloseElement.addEventListener(`click`, onPopupCloseClick);
   };
 
   let onMapPreviewElementClick = (evt) => {
     evt.preventDefault();
-    contactsMapElement.classList.add(`modal-show`);
+    contactsMapElement.classList.add(POPUP_SHOW_CLASS);
 
     let popupCloseElement = findPopupCloseElement(contactsMapElement);
     popupCloseElement.addEventListener(`click`, onPopupCloseClick);
@@ -90,13 +93,13 @@
   let onDocumentKeyDown = (evt) => {
     if (evt.keyCode === 27) {
       if (writeUsElement) {
-        writeUsElement.classList.remove(`modal-show`);
+        writeUsElement.classList.remove(POPUP_SHOW_CLASS);
       }
       if (contactsMapElement) {
-        contactsMapElement.classList.remove(`modal-show`);
+        contactsMapElement.classList.remove(POPUP_SHOW_CLASS);
       }
       if (basketInfoElement) {
-        basketInfoElement.classList.remove(`modal-show`);
+        basketInfoElement.classList.remove(POPUP_SHOW_CLASS);
       }
       evt.preventDefault();
     }
@@ -105,22 +108,22 @@
   let onServiceItemButtonClick = (dataset) => {
     return (evt) => {
       evt.preventDefault();
-      let serviceItem = evt.target.closest(`.service-item`);
+      let serviceItem = evt.target.closest(`.service__item`);
 
-      if (serviceItem.classList.contains(`service-item-active`)) {
+      if (serviceItem.classList.contains(SERVICE_ITEM_ACTIVE_CLASS)) {
         return;
       }
 
       Array.from(serviceItemElements).forEach((serviceItemElement) => {
-        serviceItemElement.classList.remove(`service-item-active`);
+        serviceItemElement.classList.remove(SERVICE_ITEM_ACTIVE_CLASS);
       });
-      serviceItem.classList.add(`service-item-active`);
+      serviceItem.classList.add(SERVICE_ITEM_ACTIVE_CLASS);
 
       Array.from(serviceSliderItemElements).forEach((serviceSlide) => {
         if (serviceSlide.classList.contains(dataset)) {
-          serviceSlide.classList.remove(`hidden`);
+          serviceSlide.classList.remove(SERVICE_ITEM_ACTIVE_HIDDEN_CLASS);
         } else {
-          serviceSlide.classList.add(`hidden`);
+          serviceSlide.classList.add(SERVICE_ITEM_ACTIVE_HIDDEN_CLASS);
         }
       });
     }
@@ -138,13 +141,13 @@
     evt.preventDefault();
 
     for (let i in promoSliderItemElements) {
-      if (promoSliderItemElements[i].classList.contains(`hidden`)) {
+      if (promoSliderItemElements[i].classList.contains(PROMO_SLIDER_ITEM_HIDDEN_CLASS)) {
         continue;
       }
 
-      promoSliderItemElements[i].classList.add(`hidden`);
+      promoSliderItemElements[i].classList.add(PROMO_SLIDER_ITEM_HIDDEN_CLASS);
       let position = getPosition(i);
-      promoSliderItemElements[position].classList.remove(`hidden`);
+      promoSliderItemElements[position].classList.remove(PROMO_SLIDER_ITEM_HIDDEN_CLASS);
 
       let dataset = promoSliderItemElements[position].dataset.slide;
       let radioInput = sliderControlsForm.querySelector(`#${dataset}`);
@@ -166,15 +169,15 @@
     evt.preventDefault();
     let inputRadio = evt.target;
 
-    if (!inputRadio.classList.contains(`slider-controls-input`)) {
+    if (!inputRadio.classList.contains(`slider-controls__input`)) {
       return;
     }
 
     Array.from(promoSliderItemElements).forEach((slider) => {
       if (slider.dataset.slide === inputRadio.id) {
-        slider.classList.remove(`hidden`);
+        slider.classList.remove(PROMO_SLIDER_ITEM_HIDDEN_CLASS);
       } else {
-        slider.classList.add(`hidden`);
+        slider.classList.add(PROMO_SLIDER_ITEM_HIDDEN_CLASS);
       }
     });
   };
@@ -186,21 +189,19 @@
   }
 
   let onGoodBuyElementClick = (evt) => {
-    let buyButton = evt.target.closest(`.good-buy`);
-    if (buyButton && evt.target.classList.contains(`good-buy`)) {
+    let buyButton = evt.target.closest(`.good__buy`);
+    if (buyButton && evt.target.classList.contains(`good__buy`)) {
       evt.preventDefault();
-      basketInfoElement.classList.add(`modal-show`);
+      basketInfoElement.classList.add(POPUP_SHOW_CLASS);
 
       let popupCloseElement = findPopupCloseElement(basketInfoElement);
-      popupCloseElement.addEventListener(`click`, onPopupCloseClick);
-
       popupCloseElement.addEventListener(`click`, onPopupCloseClick);
     }
   };
 
   let onBasketInfoProceedElementClick = (evt) => {
     evt.preventDefault();
-    basketInfoElement.classList.remove(`modal-show`);
+    basketInfoElement.classList.remove(POPUP_SHOW_CLASS);
   }
 
   let addHandlers = () => {

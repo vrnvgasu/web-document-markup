@@ -11,8 +11,6 @@ const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const del = require("del");
 
 // Styles
