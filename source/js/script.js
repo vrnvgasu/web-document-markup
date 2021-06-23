@@ -233,3 +233,72 @@
 
   addHandlers();
 })();
+
+(() => {
+  const mockGoods = [];
+  const goodList = document.querySelector(`.good__list`);
+
+  const goodItemFactory = (i) => {
+    return {
+      name: `Перфоратор BOSCH BFG ${getRandomArbitrary(1, 9)}000`,
+      oldPrice: getRandomArbitrary(5500, 10000),
+      price: getRandomArbitrary(500, 5000),
+      img: `img/bosch-bfg-${getRandom([2000, 3000, 6000, 9000])}.jpg`,
+      uuid: i,
+      stock: Boolean(Math.round(Math.random())),
+    }
+  };
+
+  const getRandom = (list) => {
+    return list[Math.floor((Math.random()*list.length))];
+  }
+
+  const getRandomArbitrary = (min, max) => {
+    return Math.round(Math.random() * (max - min) + min);
+  }
+
+  const createMockGoods = () => {
+    for (let i = 0; i < 10; i++) {
+      mockGoods.push(goodItemFactory(i));
+    }
+  };
+
+  const renderGoodsOnPage = () => {
+    const limit = goodList.dataset.limit;
+
+    for (let i = 0; i < limit; i++) {
+      renderGoodItemElement(mockGoods[i]);
+    }
+  };
+
+  const renderGoodItemElement = ({name, oldPrice, price, img, stock, uuid}) => {
+    goodList.insertAdjacentHTML(`beforeend`, `<li class="good__item" data-uuid="${uuid}">
+      <div class="flag ${stock ? '' : 'hidden'}">
+        <div class="flag__item"><span>NEW</span></div>
+      </div>
+      <div class="good__img">
+        <img src="${img}" width="144" height="128"
+             alt="${name}">
+      </div>
+      <div class="good__item-buttons">
+        <a href="" class="button good__buy">
+          <svg aria-hidden="true" focusable="false" width="15" height="15" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <g opacity=".3" fill="#fff">
+              <path
+                d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/>
+            </g>
+          </svg>
+          КУПИТЬ
+        </a>
+        <button type="button" class="button good__bookmark">В ЗАКЛАДКИ</button>
+      </div>
+      <h3>${name}</h3>
+      <del>${oldPrice} Р.</del>
+      <a href="" class="button good__view" aria-label="Заказать товар">${price} Р.</a>
+    </li>`);
+  };
+
+  createMockGoods();
+  renderGoodsOnPage();
+})();
