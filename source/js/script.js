@@ -19,7 +19,7 @@
   const SERVICE_ITEM_ACTIVE_HIDDEN_CLASS = `service__slider-item--hidden`;
   const PROMO_SLIDER_ITEM_HIDDEN_CLASS = `promo-slider__item--hidden`;
 
-  let storage = {};
+  const storage = {};
 
   try {
     storage.name = localStorage.getItem(`name`);
@@ -29,7 +29,7 @@
     storage.email = null;
   }
 
-  let onPopupCloseClick = (evt) => {
+  const onPopupCloseClick = evt => {
     evt.preventDefault();
     let popup = evt.target.closest(`.popup`);
     popup.classList.remove(POPUP_SHOW_CLASS);
@@ -37,11 +37,11 @@
     evt.target.removeEventListener(`click`, onPopupCloseClick);
   };
 
-  let findPopupCloseElement = (popup) => {
+  const findPopupCloseElement = popup => {
     return popup.querySelector(`.popup__close`);
   };
 
-  let focusForm = () => {
+  const focusForm = () => {
     const emailElement = writeUsElement.querySelector(`#email`);
     const nameElement = writeUsElement.querySelector(`#name`);
     const messageElement = writeUsElement.querySelector(`#message`);
@@ -50,6 +50,7 @@
       nameElement.value = storage.name;
     } else {
       nameElement.focus();
+
       return;
     }
 
@@ -61,7 +62,7 @@
     }
   }
 
-  let onAboutContactsButtonElementClick = (evt) => {
+  const onAboutContactsButtonElementClick = evt => {
     evt.preventDefault();
     writeUsElement.classList.add(POPUP_SHOW_CLASS);
 
@@ -71,7 +72,7 @@
     popupCloseElement.addEventListener(`click`, onPopupCloseClick);
   };
 
-  let onMapPreviewElementClick = (evt) => {
+  const onMapPreviewElementClick = evt => {
     evt.preventDefault();
     contactsMapElement.classList.add(POPUP_SHOW_CLASS);
 
@@ -81,7 +82,7 @@
     popupCloseElement.addEventListener(`click`, onPopupCloseClick);
   }
 
-  let onWriteUsFormSubmit = () => {
+  const onWriteUsFormSubmit = () => {
     if (emailElement.value) {
       localStorage.setItem(`email`, emailElement.value);
     }
@@ -90,7 +91,7 @@
     }
   };
 
-  let onDocumentKeyDown = (evt) => {
+  const onDocumentKeyDown = evt => {
     if (evt.keyCode === 27) {
       if (writeUsElement) {
         writeUsElement.classList.remove(POPUP_SHOW_CLASS);
@@ -101,11 +102,12 @@
       if (basketInfoElement) {
         basketInfoElement.classList.remove(POPUP_SHOW_CLASS);
       }
+
       evt.preventDefault();
     }
   };
 
-  let onServiceItemButtonClick = (dataset) => {
+  const onServiceItemButtonClick = dataset => {
     return (evt) => {
       evt.preventDefault();
       let serviceItem = evt.target.closest(`.service__item`);
@@ -129,7 +131,7 @@
     }
   };
 
-  let addServiceSliderHandlers = () => {
+  const addServiceSliderHandlers = () => {
     Array.from(serviceItemElements).forEach((element) => {
       let dataset = element.dataset.slide;
 
@@ -137,7 +139,7 @@
     });
   }
 
-  let flipThoughPromoSliders = (evt, getPosition) => {
+  const flipThoughPromoSliders = (evt, getPosition) => {
     evt.preventDefault();
 
     for (let i in promoSliderItemElements) {
@@ -157,15 +159,15 @@
     }
   };
 
-  let onSliderButtonNextElementClick = (evt) => {
-    flipThoughPromoSliders(evt, (i) => (+i === promoSliderItemElements.length - 1) ? 0 : +i + 1);
+  const onSliderButtonNextElementClick = evt => {
+    flipThoughPromoSliders(evt, i => (+i === promoSliderItemElements.length - 1) ? 0 : +i + 1);
   };
 
-  let onSliderButtonBackElementClick = (evt) => {
-    flipThoughPromoSliders(evt, (i) => (+i === 0) ? promoSliderItemElements.length - 1 : 0);
+  const onSliderButtonBackElementClick = (evt) => {
+    flipThoughPromoSliders(evt, i => (+i === 0) ? promoSliderItemElements.length - 1 : 0);
   };
 
-  let onSliderFormChange = (evt) => {
+  const onSliderFormChange = evt => {
     evt.preventDefault();
     let inputRadio = evt.target;
 
@@ -182,13 +184,13 @@
     });
   };
 
-  let addPromoSliderHandlers = () => {
+  const addPromoSliderHandlers = () => {
     sliderButtonNextElement.addEventListener(`click`, onSliderButtonNextElementClick);
     sliderButtonBackElement.addEventListener(`click`, onSliderButtonBackElementClick);
     sliderControlsForm.addEventListener(`change`, onSliderFormChange);
   }
 
-  let onGoodBuyElementClick = (evt) => {
+  const onGoodBuyElementClick = evt => {
     let buyButton = evt.target.closest(`.good__buy`);
     if (buyButton && evt.target.classList.contains(`good__buy`)) {
       evt.preventDefault();
@@ -199,12 +201,12 @@
     }
   };
 
-  let onBasketInfoProceedElementClick = (evt) => {
+  const onBasketInfoProceedElementClick = evt => {
     evt.preventDefault();
     basketInfoElement.classList.remove(POPUP_SHOW_CLASS);
   }
 
-  let addHandlers = () => {
+  const addHandlers = () => {
     if (aboutContactsButtonElement) {
       aboutContactsButtonElement.addEventListener(`click`, onAboutContactsButtonElementClick);
     }
@@ -214,12 +216,16 @@
     if (mapPreviewElement) {
       mapPreviewElement.addEventListener(`click`, onMapPreviewElementClick);
     }
+
     document.addEventListener(`keydown`, onDocumentKeyDown);
+
     if (sliderControlsForm) {
       addServiceSliderHandlers();
       addPromoSliderHandlers();
     }
+
     document.addEventListener(`click`, onGoodBuyElementClick);
+
     if (basketInfoProceedElement) {
       basketInfoProceedElement.addEventListener(`click`, onBasketInfoProceedElementClick);
     }
