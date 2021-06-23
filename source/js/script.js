@@ -235,8 +235,13 @@
 })();
 
 (() => {
-  const mockGoods = [];
+  const mockGoods = {};
+  const basket = {};
+  const bookmark = {};
+
   const goodList = document.querySelector(`.good__list`);
+  const basketOutputElement = document.querySelector(`.utility-panel__item--basket output`);
+  const bookmarkOutputElement = document.querySelector(`.utility-panel__item--bookmark output`);
 
   const goodItemFactory = (i) => {
     return {
@@ -259,15 +264,22 @@
 
   const createMockGoods = () => {
     for (let i = 0; i < 10; i++) {
-      mockGoods.push(goodItemFactory(i));
+      let item = goodItemFactory(i);
+      mockGoods[item.uuid] = item;
     }
   };
 
   const renderGoodsOnPage = () => {
     const limit = goodList.dataset.limit;
+    let i = 0;
 
-    for (let i = 0; i < limit; i++) {
-      renderGoodItemElement(mockGoods[i]);
+    for (let uuid in mockGoods) {
+      if (i >= limit) {
+        break;
+      }
+
+      renderGoodItemElement(mockGoods[uuid]);
+      i++;
     }
   };
 
@@ -298,6 +310,36 @@
       <a href="" class="button good__view" aria-label="Заказать товар">${price} Р.</a>
     </li>`);
   };
+
+  const getObjectSize = (obj) => {
+    let result = 0;
+
+    for (let key in obj) {
+      result++;
+    }
+
+    return result;
+  }
+
+  goodList.addEventListener(`click`, evt => {
+    const target = evt.target;
+
+    if (target.classList.contains(`good__buy`)) {
+      evt.preventDefault();
+      let uuid = target.closest(`.good__item`).dataset.uuid;
+      basket[uuid] = mockGoods[uuid];
+      basketOutputElement.textContent = getObjectSize(basket);
+      console.log(`Корзина --`, basket);
+    }
+
+    if (target.classList.contains(`good__bookmark`)) {
+      evt.preventDefault();
+      let uuid = target.closest(`.good__item`).dataset.uuid;
+      bookmark[uuid] = mockGoods[uuid];
+      bookmarkOutputElement.textContent = getObjectSize(bookmark);
+      console.log(`Закладки --`, bookmark);
+    }
+  });
 
   createMockGoods();
   renderGoodsOnPage();
